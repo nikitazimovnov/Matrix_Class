@@ -18,6 +18,10 @@ public class Matrix {
         return 0;
     }
 
+    public int elementsCount() {
+        return getDim(0) * getDim(1);
+    }
+
     public double getTrace() {
         int minDim = Math.min(getDim(0), getDim(1));
         double trace = 0;
