@@ -42,7 +42,7 @@ public class Matrix {
 
     public static Matrix Minus(Matrix matrix1, Matrix matrix2) throws MatrixException {
         if (matrix1.getDim(0) != matrix2.getDim(0) || matrix1.getDim(1) != matrix2.getDim(1))
-            throw new MatrixException("Invalid plus operation.\nIncorrect matrix sizes.");
+            throw new MatrixException("Invalid minus operation.\nIncorrect matrix sizes.");
 
         double[][] result = new double[matrix1.getDim(0)][matrix1.getDim(1)];
         for (int i = 0; i < matrix1.getDim(0); i++) {
