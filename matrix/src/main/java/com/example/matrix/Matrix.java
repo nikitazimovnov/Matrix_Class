@@ -22,6 +22,16 @@ public class Matrix {
         return getDim(0) * getDim(1);
     }
 
+    public boolean isIdentity() {
+        for (int i = 0; i < getDim(0); i++) {
+            for (int j = 0; j < getDim(1); j++) {
+                if ((i != j && matrix[i][j] != 0) || (i == j && matrix[i][j] != 1))
+                    return false;
+            }
+        }
+        return true;
+    }
+
     public double getTrace() {
         int minDim = Math.min(getDim(0), getDim(1));
         double trace = 0;
